@@ -49,7 +49,7 @@ def cli_input_coords():
 
 def simple_game_loop():
     """
-    Initialises the game, processes the players' moves and ends the game . 
+    Initialises the game, processes the players' moves and ends the game. 
     """
 
     print("Welcome to CLI Reversi! :)")
