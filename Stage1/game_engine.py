@@ -1,5 +1,5 @@
 """
-CLI version of Reversi.
+CLI version of Reversi
 
 Handles user input and executes the main game loop. Each turn it validates the
 moves entered by the player, updates the board with the chosen move and switches turn.
@@ -56,8 +56,13 @@ def simple_game_loop():
 
     # Initialise the board and some variables used throughout the whole game
     board = components.initialise_board(BOARD_SIZE)
+
+    # Keeps track of how many moves can be made before the game ends
     move_counter = 60
+
+    # Keeps track of whos turn it is
     current_player_colour = "Dark "
+
     game_won = False
     previous_turn_passed = False
 

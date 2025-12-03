@@ -38,11 +38,11 @@
             border-radius: 50%;
         }
         .black {
-            background: #222;
+            background: #004838;
         }
         .white {
-            background: #fff;
-            border: 1px solid #222;
+            background: #baeea3;
+            border: 1px solid #004838;
         }
         #messageBox{
             height: 10em; /* Adjust as needed */
@@ -85,14 +85,14 @@
                     loadBoard();}          
                 else if (data['status'] === 'fail'){
                     updateMessageBox('Invalid move at (' + x + ', ' + y + '): ' + data['message']);}
-                
-                else if (data['finished']){
+                //Separate from previous cases so that they do not override the end of the game happening
+                if (data['finished']){
                     //Game is finished
                     //Update the board
                     board = data['board'];
                     //Reload the board
                     loadBoard();        
-                    document.getElementById('messageBox').innerHTML = data['finished'].toString();
+                    document.getElementById('messageBox').innerHTML = data['finished'].toString() + "\n";
                     alert(data['finished'].toString());
                 }
             })
@@ -145,6 +145,23 @@
     </div>
     <div id="messageBox" style="width: 80%; height: 10vh; border: 1px solid black; padding: 10px; overflow-y: auto;">
         <h2>Game Log:</h2>
+        It's {{ turn }}'s turn.
+    </div>
+    <form action="/reset" method="post">
+        <button type="submit">Reset Current Game</button>
+    </form>
+    <h1>Save/Load Game</h1>
+
+    <form action="/save" method="get">
+        <button type="submit">Save Game</button>
+    </form>
+
+    <form action="/load" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".json" required>
+        <button type="submit">Load Game</button>
+    </form>
+
+    <div style="height: 50px;">
     </div>
 
 </body></html>
