@@ -3,6 +3,13 @@ import components
 BOARD_SIZE = 8
 
 def cli_input_coords():
+    """
+    Requests column and row number of the cell the player wants to place a counter on until valid numbers are inputted.
+
+    Returns:
+        tuple(int,int): The x and y position of the players desired move.
+    """
+    
     while True:
         x = input("Enter x coordinate of move: ")
         y = input("Enter y coordinate of move: ")
@@ -12,21 +19,18 @@ def cli_input_coords():
         x = int(x)
         y = int(y)
         if x < 1 or y < 1 or x > BOARD_SIZE or y > BOARD_SIZE:
-            print(f"Coordinate numbers must be within 0 and {BOARD_SIZE}")
+            print(f"Coordinate numbers must be whole numbers within 0 and {BOARD_SIZE}")
             continue
         return (x, y)
     
 def simple_game_loop():
+    """
+    Initialises the game, processes the players' moves and ends the game . 
+    """
+    
     print("Welcome to CLI Reversi! :)")
 
     board = components.initialise_board(BOARD_SIZE)
-
-    for x in range(BOARD_SIZE):
-        for y in range(BOARD_SIZE):
-            board[y][x] = "Light" if (x+y)%2 else "Dark "
-            if x in [4,3,5] and y in [4,3,5]:
-                board[y][x] = "None "
-            
 
     move_counter = 60
     current_player_colour = "Dark "
