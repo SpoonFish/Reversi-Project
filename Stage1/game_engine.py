@@ -42,7 +42,7 @@ def cli_input_coords():
 
         # Check the coordinates are on the board
         if x < 1 or y < 1 or x > BOARD_SIZE or y > BOARD_SIZE:
-            print(f"Coordinates must be whole numbers within 0 and {BOARD_SIZE}")
+            print(f"Coordinates must be whole numbers within 1 and {BOARD_SIZE}")
             continue
 
         return (x, y)
