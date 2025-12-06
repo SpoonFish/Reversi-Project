@@ -28,14 +28,14 @@ game_state = {
 # This map favours the corners highly as corners are useful and are unable
 # to be flipped after being claimed
 ai_score_map = [
-    [3, -3, 2, 1, 1, 2, -3, 3],
+    [3,  -3,  2,  1,  1,  2, -3,  3],
     [-3, -4, -1, -1, -1, -1, -4, -3],
-    [2, -1, 0, 0, 0, 0, -1, 2],
-    [1, -1, 0, 0, 0, 0, -1, 1],
-    [1, -1, 0, 0, 0, 0, -1, 1],
-    [2, -1, 0, 0, 0, 0, -1, 2],
+    [2,  -1,  0,  0,  0,  0, -1,  2],
+    [1,  -1,  0,  0,  0,  0, -1,  1],
+    [1,  -1,  0,  0,  0,  0, -1,  1],
+    [2,  -1,  0,  0,  0,  0, -1,  2],
     [-3, -4, -1, -1, -1, -1, -4, -3],
-    [3, -3, 2, 1, 1, 2, -3, 3],
+    [3,  -3,  2,  1,  1,  2, -3,  3],
 ]
 
 def execute_move(colour,coord,board):
@@ -242,7 +242,7 @@ def ai_move():
     legal_moves = []
     for x in range(1, 9):
         for y in range(1, 9):
-            if components.legal_move("Light",(x,y),game_state["board"]):
+            if components.legal_move("Light",(x, y),game_state["board"]):
                 legal_moves.append((x, y))
 
     # Check which move from the list has the highest score (predicted as best move)
