@@ -76,6 +76,22 @@ Flask App Routes:
   - Purpose: Resets the current game to the initial state. Activated by a 'reset game' button on the web page.
   - Why this design?: Allowing the game to be reset lets player play the game again after ending a game and also lets them reset the game if they no longer wish to continue with a game.
 
+## Project Information
+
+**Project Name:** Reversi Project<br>
+**Author:** Matthew Risso<br>
+**Created:** December 2025<br>
+**Last Updated:** December 2025
+
+## License
+This project is licensed under the MIT License.  
+See the `LICENSE` file included in the repository for details.
+
+
+## Handle/Repository
+The source code for this project is available at:
+https://github.com/SpoonFish/Reversi-Project
+
 ## Flow Diagrams
 ![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_ai_move.png)
 ![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_calculate_winner.png)
