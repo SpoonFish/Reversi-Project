@@ -77,4 +77,11 @@ Flask App Routes:
   - Why this design?: Allowing the game to be reset lets player play the game again after ending a game and also lets them reset the game if they no longer wish to continue with a game.
 
 ## Flow Diagrams
-![alt text](https://github.com/Reversi-Project/stage3/flowchart_image.png "Logo Title Text 1")
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_ai_move.png)
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_calculate_winner.png)
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_print_board.png)
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_pass_turn.png)
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_legal_move.png)
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_legal_move_available.png)
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_execute_move.png)
+![](https://github.com/SpoonFish/Reversi-Project/blob/main/Stage3/flowcharts/flowchart_initialise_board.png)
