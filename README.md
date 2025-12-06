@@ -6,7 +6,7 @@ In this application players are able to play Reversi against another player on t
 The backend handles the processing of moves, save file generation, AI move calculation, turn switching and game ending conditions.
 
 ## Design breakdown and module reasoning
-# `components.py`
+### `components.py`
 Contains utility functions that carry out some of the core behaviours of the processing of moves in the game. There is no Flask code in this module making it usable for other implementations of Reversi.
 
 Functions:
@@ -22,7 +22,7 @@ Functions:
   - Purpose: Checks if a move is allowed to be played by checking it against the rules of Reversi using the current players turn, the coordinates of the desired move and the current state of the board. Uses vector based directional scanning.
   - Why this design?: Using directional scanning from the desired move coordinate allows scalable and efficient checking of legal moves for any board size. Separates logic of the game from the Flask related parts. Simply returns True if the move is legal and False if not.
 
-# `flask_game_engine.py`
+### `flask_game_engine.py`
 This module handles requests made by the web page so that moves can be made on the web page and the backend updates the board and renders the result of that move. Saving, loading and resetting of games is handled here. Also contains additional helper functions to process logic of the game that was not mentioned in the specification for `components.py` such as passing turns, placing counters and flipping outflanked counters for legal moves, and determining the winner of the game based on the end state of the board.
 
 Key Variables:
@@ -75,3 +75,6 @@ Flask App Routes:
 - `/reset` (POST)
   - Purpose: Resets the current game to the initial state. Activated by a 'reset game' button on the web page.
   - Why this design?: Allowing the game to be reset lets player play the game again after ending a game and also lets them reset the game if they no longer wish to continue with a game.
+
+## Flow Diagrams
+![alt text](https://github.com/Reversi-Project/stage3/flowchart_image.png "Logo Title Text 1")
