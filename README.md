@@ -5,6 +5,8 @@ In this application players are able to play Reversi against another player on t
 
 The backend handles the processing of moves, save file generation, AI move calculation, turn switching and game ending conditions.
 
+The AI algorithm used in the project focuses on strategic, positional gameplay. It uses a score map that assigns a score to each cell on the board. The higher the score, the more positonally advantageous the move at that position likely is. This gives the AI a good sense of corner control as corners are valuable positions to claim in Reversi because they cannot be outflanked. The AI will play the first legal move with the highest score it finds from the top left of the board along each row.
+
 ## Design breakdown and module reasoning
 ### `components.py`
 Contains utility functions that carry out some of the core behaviours of the processing of moves in the game. There is no Flask code in this module making it usable for other implementations of Reversi.
